@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Nanum+Myeongjo&display=swap');
+:root{
+    --primary-color:#fff;
+    --secondary-color:#f7b93c;
+    --third-color:#eb9800;
+    --fourth-color:#f4bd2f;
+    --fifth-color:#643201;
+    --sixth-color:#7d4c00;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nanum Myeongjo", serif;
+
+}
+
+.wrapper-nav{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+
+}
+
+.container-nav{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    height: 12vh;
+}
+
+.container-nav-left{
+    display: flex;
+}
+
+.nav-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.725rem;
+}
+
+.nav-image img{
+    width: 3rem;
+}
+
+
+.nav-left-title h1{
+    font-family: "Baloo 2", sans-serif;;
+}
+.container-nav-center ul,
+.container-nav-right ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+.container-nav-center ul li a{
+   text-decoration: none;
+   color: var(--fifth-color);
+   font-size: 900;
+}
+.container-nav-right ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 900;
+}
+.container-nav-right li{
+    background-color: var(--fifth-color);
+    color: var(--third-color);
+    padding: 0.5rem 1rem;
+}
+.container-beranda-1{
+    position: relative;
+    width: 100%;
+}
+
+.container-beranda-1 img{
+    height: 88vh;
+    width: 100vw;
+}
+
+.beranda-container {
+    position: absolute;
+    top: 20%;      /* jarak dari atas gambar */
+    left: 9%;     /* jarak dari kiri gambar */
+    color: white;   /* biar kontras dengan gambar */
+    padding: 10px;
+    border-radius: 8px; /* opsional */
+}
+
+.beranda-container-2{
+    position: absolute;
+    right: 9%;
+}
+.beranda-container p{
+    width: 45rem;
+    font-size: 1.2rem;
+}
+
+.beranda-container h1{
+    font-size: 3rem;
+}
+span{
+    color: var(--third-color);
+}
+
+.beranda-searching {
+    position: absolute;
+    bottom: 25%;
+    left: 9%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 1rem;
+    font-size: 16px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    width: 250px;
+    transition: 0.3s;
+   border: none;
+}
+
+.search-input:focus {
+    border-color: var(--fifth-color);
+}
+
+.search-button {
+    padding: 0.82rem 1rem;
+    font-size: 16px;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    background-color: var(--fourth-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-button ion-icon{
+    font-size: 1.5rem;
+}
+.search-button:hover {
+    background-color: var(--fifth-color);
+}
+
+.beranda-arrow{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    color: var(--third-color);
+    font-size: 3rem;
+    bottom: 10%;
+    left: 9%;
+}
+
+.beranda-arrow ion-icon{
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.arrow-1{
+    padding-right: 0.3rem;
+}
+
+.arrow-2{
+    padding-left: 0.3rem;
+}
