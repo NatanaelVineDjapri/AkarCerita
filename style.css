@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Luxurious+Roman&family=Nanum+Myeongjo&display=swap');
 :root{
     --primary-color:#fff;
     --secondary-color:#f7b93c;
@@ -13,15 +13,13 @@ html,body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Nanum Myeongjo", serif;
+    overflow-x: hidden;
 
 }
 
 .wrapper-nav{
-    position:fixed;
     width: 100%;
     top: 0;
-    z-index: 999;
-
 }
 
 .container-nav{
@@ -31,6 +29,11 @@ html,body{
     align-items: center;
     padding: 0.5rem 5rem;
     height: 12vh;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--primary-color);
+    width: 100%;
+    transition: top 0.3s ease;
 }
 
 .container-nav-left{
@@ -48,10 +51,10 @@ html,body{
     width: 3rem;
 }
 
-
 .nav-left-title h1{
     font-family: "Baloo 2", sans-serif;;
 }
+
 .container-nav-center ul,
 .container-nav-right ul{
     list-style: none;
@@ -60,52 +63,103 @@ html,body{
 }
 
 
+
 .container-nav-center ul li a{
    text-decoration: none;
    color: var(--fifth-color);
-   font-size: 900;
+   font-weight: 900;
 }
+
+.container-nav-center ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--third-color);
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.5rem;
+
+}
+
 .container-nav-right ul li a{
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 900;
+    font-weight: 900;
 }
+
 .container-nav-right li{
     background-color: var(--fifth-color);
     color: var(--third-color);
     padding: 0.5rem 1rem;
 }
-.container-beranda-1{
+
+.container-nav-right li:hover{
+    background-color: var(--third-color);
+}
+.container-beranda-1 {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
-.container-beranda-1 img{
+.container-beranda-1.active{
+    display: block;
+}
+
+.container-beranda-1 img {
     height: 88vh;
     width: 100vw;
+    object-fit: cover;
+    display: block;
+    z-index: 0; 
+    position: relative;
 }
 
 .beranda-container {
     position: absolute;
-    top: 20%;      /* jarak dari atas gambar */
-    left: 9%;     /* jarak dari kiri gambar */
-    color: white;   /* biar kontras dengan gambar */
-    padding: 10px;
-    border-radius: 8px; /* opsional */
+    top: 20%;      
+    left: 9%;     
+    color: white;  
+    /* padding: 10px; */
+    border-radius: 0.5rem;
+}
+
+.beranda-container,
+.beranda-container-2,
+.beranda-searching {
+  z-index: 5;
+  position: absolute;
+}
+
+.beranda-section{
+    position: relative;
+    padding-top: 12vh;
 }
 
 .beranda-container-2{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
     right: 9%;
+    top: 20%;       
+    color: var(--primary-color);
 }
-.beranda-container p{
+
+.beranda-container-2 .beranda-text{
+    width: 60%;
+    text-align: end;
+}
+
+.beranda-container p,
+.beranda-container-2 p{
     width: 45rem;
     font-size: 1.2rem;
 }
 
-.beranda-container h1{
+.beranda-container h1,
+.beranda-container-2 h1{
     font-size: 3rem;
 }
+
 span{
     color: var(--third-color);
 }
@@ -152,25 +206,28 @@ span{
 .search-button ion-icon{
     font-size: 1.5rem;
 }
+
 .search-button:hover {
     background-color: var(--fifth-color);
 }
 
-.beranda-arrow{
+.beranda-arrow {
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    color: var(--third-color);
+    left: 10%;
+    bottom: 5%;
     font-size: 3rem;
-    bottom: 10%;
-    left: 9%;
+    z-index: 99;     
 }
 
 .beranda-arrow ion-icon{
     background-color: var(--primary-color);
+    color: var(--fourth-color);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .arrow-1{
@@ -179,4 +236,177 @@ span{
 
 .arrow-2{
     padding-left: 0.3rem;
+}
+
+.beranda-social-media{
+    position: absolute;
+    z-index: 5;
+    right: 10%;
+    bottom: 30%;
+    
+}
+
+.beranda-social-media ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.beranda-social-media ul li {
+    list-style: none;
+}
+
+.beranda-social-media ul li a {
+    font-size: 1.7rem;
+    color: var(--third-color);
+}
+
+.beranda-line{
+    z-index: 5;
+    position:absolute;
+    bottom: 39%;
+    right: 10%;
+    width: 30rem;
+    height: 0.5rem;
+    background-color: var(--third-color);
+}
+
+.main-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tentangkami-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    box-sizing: border-box;
+    padding-top: 2rem;
+}
+
+.tentangkami-container-2{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.tentangkami-sub-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tentangkami-sub-left h3{
+    font-size: 2.5rem;
+    width: 70%;
+    margin: 2.7rem auto 0;
+    line-height: 1.3;
+}
+.tentangkami-sub-right{
+    flex: 1;
+}
+
+.tentangkami-image {
+    display: flex;
+    width: 100%;
+    
+    gap: 10px; 
+    flex-wrap: nowrap;
+}
+
+.tk-img-cover{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.tk-img-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 1s ease;
+    display: block;
+}
+
+.tentangkami-image div {
+    flex: 1;
+    overflow: hidden; 
+}
+
+.tentangkami-image img:hover {
+    transform: scale(1.3); 
+}
+.tk-sub-right-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tk-sub-right-top h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.tk-line{
+    width: 15rem;
+    flex: 1; 
+    height: 0.3rem;
+    background-color: var(--fifth-color);
+}
+
+.tk-sub-right-bot p{
+    text-align: justify;
+}
+
+#tentangkami{
+    min-height: 100vh;
+}
+
+.tk-line-2{
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--fifth-color);
+}
+
+.ceritarakyat-container {
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.peta-container {
+    width: 100%;        
+    max-width: 40rem;    
+    height: 0;
+    padding-bottom: 60%; /* tinggi proporsional */
+    position: relative;
+    margin: auto;
+}
+
+.peta-container object {
+    color: #643201;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.info-wrapper {
+    flex: 2 2 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-wrapper h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.info-wrapper p{
+    margin: 0;
 }
