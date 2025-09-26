@@ -1,7 +1,8 @@
 const slides = document.querySelectorAll(".container-beranda-1");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-
+var petaObj = document.getElementById('petaIndonesia');
+const container = document.querySelector(".topcerita-list");
 
 let currentIndex = 0;
 
@@ -64,7 +65,6 @@ startSlideShow();
 
 
 
-var petaObj = document.getElementById('petaIndonesia');
 
 petaObj.addEventListener('load', function() {
     // Ambil dokumen SVG di dalam <object>
@@ -98,3 +98,27 @@ petaObj.addEventListener('load', function() {
         });
     }
 });
+
+function renderTopCerita(containerSelector, data) {
+  const container = document.querySelector(containerSelector);
+  container.innerHTML = ""; // biar gak dobel kalau dipanggil ulang
+
+  data.forEach(cerita => {
+    const div = document.createElement("div");
+    div.classList.add("topcerita-container");
+
+    div.innerHTML = `
+      <div class="tk-img-cover-2"><img src="${cerita.img}" alt="${cerita.title}"></div>
+      <div class="top-cerita-title">
+        <h3>${cerita.title}</h3>
+        <p>${cerita.desc}</p>
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+renderTopCerita(".topcerita-list", topCerita);
+
+
