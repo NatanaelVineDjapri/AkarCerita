@@ -1,12 +1,13 @@
 const slides = document.querySelectorAll(".container-beranda-1");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-var petaObj = document.getElementById('petaIndonesia');
+var petaObj = document.getElementById("petaIndonesia");
 const container = document.querySelector(".topcerita-list");
+const registerBottom = document.getElementById("register")
 
 let currentIndex = 0;
 
-
+/* ---------------- SLIDESHOW ---------------- */
 function showSlide(index) {
   slides.forEach((slide, i) => {
     slide.style.display = "none";
@@ -19,17 +20,21 @@ function showSlide(index) {
 }
 
 function startSlideShow() {
-  setInterval(function() {
+  setInterval(function () {
     currentIndex++;
     if (currentIndex >= slides.length) {
       currentIndex = 0;
     }
     showSlide(currentIndex);
-  }, 10000); 
+  }, 10000);
 }
 
-
-nextBtn.addEventListener("click", function(){
+function clickRegister(){
+  if (window.location.hash === "#auth") {
+    document.getElementById("signUp").click();
+  }
+}
+nextBtn.addEventListener("click", function () {
   currentIndex++;
   if (currentIndex >= slides.length) {
     currentIndex = 0;
@@ -37,7 +42,7 @@ nextBtn.addEventListener("click", function(){
   showSlide(currentIndex);
 });
 
-prevBtn.addEventListener("click", function(){
+prevBtn.addEventListener("click", function () {
   currentIndex--;
   if (currentIndex < 0) {
     currentIndex = slides.length - 1;
@@ -45,11 +50,15 @@ prevBtn.addEventListener("click", function(){
   showSlide(currentIndex);
 });
 
-let lastScrollTop = 0; 
+showSlide(currentIndex);
+startSlideShow();
+
+/* ---------------- NAVBAR SCROLL ---------------- */
+let lastScrollTop = 0;
 let navbar = document.querySelector(".container-nav");
 
 window.addEventListener("scroll", function () {
-  let scrollTop = window.scrollY || document.documentElement.scrollTop; //ambil posisi scroll skrng
+  let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
     navbar.style.top = "-15vh";
@@ -60,50 +69,41 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-showSlide(currentIndex);
-startSlideShow();
+/* ---------------- PETA INDONESIA ---------------- */
+petaObj.addEventListener("load", function () {
+  var svgDoc = petaObj.contentDocument;
+  var provinsi = svgDoc.querySelectorAll("path");
 
+  for (var i = 0; i < provinsi.length; i++) {
+    var p = provinsi[i];
+    provinsi[i].style.fill = "#eb9800";
+    provinsi[i].style.stroke = "#643201";
+    p.style.cursor = "pointer";
 
+    // Klik
+    p.addEventListener("click", function () {
+      alert("Kamu klik: " + this.id);
+      // window.location = "provinsi.html?name=" + this.id;
+    });
 
+    // Hover masuk
+    p.addEventListener("mouseover", function () {
+      this.style.fill = "orange";
+    });
 
-petaObj.addEventListener('load', function() {
-    // Ambil dokumen SVG di dalam <object>
-    var svgDoc = petaObj.contentDocument;
-
-    // Ambil semua elemen <path> di SVG (misal tiap provinsi bentuknya path)
-    var provinsi = svgDoc.querySelectorAll('path');
-
-    // Loop tiap path (provinsi)
-    for (var i = 0; i < provinsi.length; i++) {
-        var p = provinsi[i];
-        provinsi[i].style.fill = '#eb9800';
-         provinsi[i].style.stroke = '#643201';
-        p.style.cursor = 'pointer';
-
-        // Event klik → tampil alert nama id provinsi
-        p.addEventListener('click', function() {
-            alert('Kamu klik: ' + this.id);
-            // bisa diganti navigasi, misal:
-            // window.location = "provinsi.html?name=" + this.id;
-        });
-
-        // Event hover → ubah warna saat mouse di atas
-        p.addEventListener('mouseover', function() {
-            this.style.fill = 'orange';
-        });
-
-        // Event hover keluar → kembalikan warna semula
-        p.addEventListener('mouseout', function() {
-            this.style.fill = '';
-        });
-    }
+    // Hover keluar
+    p.addEventListener("mouseout", function () {
+      this.style.fill = "";
+    });
+  }
 });
 
+/* ---------------- TOP CERITA ---------------- */
 function renderTopCerita(containerSelector, data) {
   const container = document.querySelector(containerSelector);
-  container.innerHTML = ""; // biar gak dobel kalau dipanggil ulang
+  container.innerHTML = "";
 
-  data.forEach(cerita => {
+  data.forEach((cerita) => {
     const div = document.createElement("div");
     div.classList.add("topcerita-container");
 
@@ -119,6 +119,7 @@ function renderTopCerita(containerSelector, data) {
   });
 }
 
+
+
+
 renderTopCerita(".topcerita-list", topCerita);
-
-
