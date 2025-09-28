@@ -1313,7 +1313,7 @@ span{
 
 .bookmark-image {
     width: 100%;
-    height: 150px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -1340,6 +1340,11 @@ span{
     align-items: center;
 }
 
+.bookmark-actions a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--third-color);
+}
 .btn-remove {
     background: var(--third-color);
     color: white;
