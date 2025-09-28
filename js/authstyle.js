@@ -4,10 +4,12 @@ const container2 = document.getElementById("container");
 
 signUpButton.addEventListener("click", () => {
   container2.classList.add("right-panel-active");
+  window.location.href = "auth.html#register";
 });
 
 signInButton.addEventListener("click", () => {
   container2.classList.remove("right-panel-active");
+  window.location.href = "auth.html#login";
 });
 
  window.addEventListener("DOMContentLoaded", function(){
@@ -17,3 +19,4 @@ signInButton.addEventListener("click", () => {
       container2.classList.remove("right-panel-active");
     }
   });
+

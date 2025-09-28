@@ -1149,6 +1149,24 @@ span{
     box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
 }
 
+.detail-sub-bot{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.bookmark-btn ion-icon {
+    vertical-align: middle;
+    color: var(--third-color);
+}
 /* Animasi keyframes */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -1168,11 +1186,13 @@ span{
 /* Kartu Akun */
 .profile-container{
     display: flex;
+    align-items: stretch;
+    justify-content: center;
     /* flex-direction: column; */
-    margin-top: 12vh;
+    margin-top:12vh;
     min-height: 88vh;
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background:url(Images/Background/3.png);
     background-position: top;
     background-repeat: no-repeat;
@@ -1180,6 +1200,7 @@ span{
     gap: 2rem;
 }
 .account-card {
+    height: 74.5vh;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1192,7 +1213,6 @@ span{
     position: relative;
     overflow: hidden;
     animation: fadeIn 0.8s ease-in-out;
-    margin-bottom: 0.5rem;
 }
 
 .account-card::before {
@@ -1209,7 +1229,8 @@ span{
 .account-avatar {
     width: 7rem;
     height: 7rem;
-    background: var(--third-color);
+    background: url(Images/Background/5.png);
+    background-size: cover;
     border-radius: 50%;
     margin: 1rem auto 1rem;
     display: flex;
@@ -1254,6 +1275,7 @@ span{
 
 .bookmark-section {
     flex: 3;
+    height: auto;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 0.5rem;
     padding: 1.8rem 1.8rem 1.4rem;
@@ -1269,12 +1291,13 @@ span{
 }
 
 .bookmark-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .bookmark-item {
+    flex: 0 0 calc((100% - 2 * 1.5rem) / 3); 
     background: var(--primary-color);
     border-radius: 0.5rem;
     overflow: hidden;

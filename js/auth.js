@@ -8,8 +8,34 @@ class User{
     }
 }
 
+const page = window.location.pathname.split("/").pop(); 
 let users = JSON.parse(localStorage.getItem("users")) || [];
-let curUsername = JSON.parse(localStorage.getItem('userln'));
+let curUsername = JSON.parse(localStorage.getItem("userln") || "null");
+const bookmarkBtn = document.getElementById('bookmarkBtn');
+var params = new URLSearchParams(window.location.search);
+
+if(page === 'detailcerita.html'){
+    var itemId = parseInt(params.get('id')); // ID cerita
+    var currentItem = ceritaRakyat.find(function(it) {
+        return it.id === itemId;
+    });
+
+    if(currentItem && bookmarkBtn){
+        updateBookmarkIcon(); 
+        bookmarkBtn.addEventListener('click', function() {
+            if(!curUsername){
+                alert("Harus Login!");
+                return;
+            }
+            if (isBookmarked()) {
+                removeBookmark(currentItem.id);
+            } else {
+                addBookmark(currentItem);
+            }
+            updateBookmarkIcon();
+        });
+    }
+}
 
 function saveUser(){
     localStorage.setItem("users", JSON.stringify(users));
@@ -70,6 +96,18 @@ function login(email, password){
         message: "Username atau password salah!"
     };
 }
+function isBookmarked() {
+    if (!curUsername || !curUsername.bookmarks) {
+        return false;
+    }
+
+    for (var i = 0; i < curUsername.bookmarks.length; i++) {
+        if (curUsername.bookmarks[i].id === currentItem.id) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function updateBookmarkIcon() {
     if(isBookmarked()){
@@ -110,6 +148,7 @@ function addBookmark(item) {
         localStorage.setItem('users', JSON.stringify(users));
         localStorage.setItem('userln', JSON.stringify(curUsername));
         alert('Cerita berhasil dibookmark!');
+        updateBookmarkIcon();
     } else {
         alert('Cerita sudah ada di bookmark.');
     }
@@ -142,7 +181,41 @@ function removeBookmark(itemId) {
     alert('Bookmark berhasil dihapus!');
 }
 
+function showBookmarks() {
+    const bookmarkList = document.getElementById('bookmarkList');
+    const noBookmarks = document.getElementById('noBookmarks');
+    const template = document.getElementById('bookmarkTemplate');
 
+    bookmarkList.innerHTML = '';
+
+    if (!curUsername || !curUsername.bookmarks || curUsername.bookmarks.length === 0) {
+        noBookmarks.style.display = 'block';
+        return;
+    } else {
+        noBookmarks.style.display = 'none';
+    }
+
+    curUsername.bookmarks.forEach(function(item) {
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector('.bookmark-image').src = item.image || '';
+        clone.querySelector('.bookmark-image').alt = item.nama;
+        clone.querySelector('.bookmark-title').innerText = item.nama;
+        clone.querySelector('.bookmark-province').innerText = item.provinsi || '';
+        clone.querySelector('.bookmark-actions a').href = `detailcerita.html?id=${item.id}`;
+
+        clone.querySelector('.btn-remove').addEventListener('click', function() {
+            removeBookmark(item.id);
+            showBookmarks();
+        });
+
+        bookmarkList.appendChild(clone);
+    });
+}
+
+if (page === 'akun.html') {
+    showBookmarks();
+}
 
 const registerForm = document.getElementById('registerForm');
 const loginForm = document.getElementById('loginForm');
@@ -181,7 +254,7 @@ if(loginForm){
     const email = document.getElementById("logEmail").value;
     const password = document.getElementById("logPassword").value;
     const hasilLogin = login (email,password);
-    if(!username || !email){
+    if(!email || !password){
         document.getElementById('loginMsg').textContent = "Semua field harus diisi!";
         return; 
     }
@@ -193,13 +266,16 @@ if(loginForm){
     })
 }
 
-if(curUsername){
-    document.getElementById('username').innerText = curUsername.username;
-    document.getElementById('email').innerText = curUsername.email;
-    document.getElementById('userId').innerText = "ID: USER-" + curUsername.id;
-} else {
-    document.getElementById('username').innerText = "Guest";
-    document.getElementById('email').innerText = "-";
-    document.getElementById('userId').innerText = "-";
+
+if (page === "akun.html") {
+    if(curUsername){
+        document.getElementById('username').innerText = curUsername.username;
+        document.getElementById('email').innerText = curUsername.email;
+        document.getElementById('userId').innerText = "ID: USER-" + curUsername.id;
+    } else {
+        document.getElementById('username').innerText = "Guest";
+        document.getElementById('email').innerText = "-";
+        document.getElementById('userId').innerText = "-";
+    }
 }
 

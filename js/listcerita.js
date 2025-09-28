@@ -69,5 +69,24 @@ const ceritaRakyat = [
                 image:"images/cerita/timunmas.jpg",
                 isi:"Di sebuah desa, seorang janda tua bernama Mbok Rondo sangat ingin punya anak. Suatu hari ia bertemu raksasa Buta Ijo yang memberinya biji mentimun ajaib, dengan syarat anak yang lahir kelak harus diserahkan saat berusia enam belas tahun. Mbok Rondo menanam biji itu, dan lahirlah seorang bayi cantik dari buah timun emas. Ia menamai gadis itu Timun Mas dan membesarkannya dengan penuh kasih, sambil menyimpan rahasia perjanjian.\n\nKetika Timun Mas hampir genap enam belas tahun, Buta Ijo datang menagih janji. Mbok Rondo meminta bantuan pertapa sakti yang memberi empat bungkusan: biji mentimun, jarum, garam, dan terasi, untuk melindungi diri. Saat dikejar raksasa, Timun Mas menaburkan bungkusan itu satu per satu. Biji mentimun menjadi hutan lebat, jarum menjelma hutan bambu runcing, garam menjadi lautan, dan terasi berubah menjadi lumpur panas. Buta Ijo akhirnya tenggelam dan lenyap. Timun Mas pulang selamat. Ia dan Mbok Rondo hidup bahagia, berterima kasih atas pertolongan dan keberanian yang menyelamatkan mereka.",
                 pesanMoral:"Legenda Timun Mas mengajarkan bahwa keberanian, kecerdikan, dan ketekunan dapat membantu mengatasi rintangan besar dan menghadapi kejahatan."
-    }
+    },
+                {
+                id:3,
+                nama: "Timun Mas",
+                deskripsi: "Timun Mas adalah cerita rakyat dari Jawa Tengah yang mengisahkan seorang gadis ajaib yang lahir dari mentimun emas, hasil permintaan seorang janda kepada raksasa. Dengan kecerdikan dan keberanian, Timun Mas berhasil lolos dari kejaran raksasa menggunakan benda-benda ajaib pemberian seorang pertapa",
+                provinsi: "Jawa Tengah",
+                image:"images/cerita/timunmas.jpg",
+                isi:"Di sebuah desa, seorang janda tua bernama Mbok Rondo sangat ingin punya anak. Suatu hari ia bertemu raksasa Buta Ijo yang memberinya biji mentimun ajaib, dengan syarat anak yang lahir kelak harus diserahkan saat berusia enam belas tahun. Mbok Rondo menanam biji itu, dan lahirlah seorang bayi cantik dari buah timun emas. Ia menamai gadis itu Timun Mas dan membesarkannya dengan penuh kasih, sambil menyimpan rahasia perjanjian.\n\nKetika Timun Mas hampir genap enam belas tahun, Buta Ijo datang menagih janji. Mbok Rondo meminta bantuan pertapa sakti yang memberi empat bungkusan: biji mentimun, jarum, garam, dan terasi, untuk melindungi diri. Saat dikejar raksasa, Timun Mas menaburkan bungkusan itu satu per satu. Biji mentimun menjadi hutan lebat, jarum menjelma hutan bambu runcing, garam menjadi lautan, dan terasi berubah menjadi lumpur panas. Buta Ijo akhirnya tenggelam dan lenyap. Timun Mas pulang selamat. Ia dan Mbok Rondo hidup bahagia, berterima kasih atas pertolongan dan keberanian yang menyelamatkan mereka.",
+                pesanMoral:"Legenda Timun Mas mengajarkan bahwa keberanian, kecerdikan, dan ketekunan dapat membantu mengatasi rintangan besar dan menghadapi kejahatan."
+    },
+                {
+                id:4,
+                nama: "Timun Mas",
+                deskripsi: "Timun Mas adalah cerita rakyat dari Jawa Tengah yang mengisahkan seorang gadis ajaib yang lahir dari mentimun emas, hasil permintaan seorang janda kepada raksasa. Dengan kecerdikan dan keberanian, Timun Mas berhasil lolos dari kejaran raksasa menggunakan benda-benda ajaib pemberian seorang pertapa",
+                provinsi: "Jawa Tengah",
+                image:"images/cerita/timunmas.jpg",
+                isi:"Di sebuah desa, seorang janda tua bernama Mbok Rondo sangat ingin punya anak. Suatu hari ia bertemu raksasa Buta Ijo yang memberinya biji mentimun ajaib, dengan syarat anak yang lahir kelak harus diserahkan saat berusia enam belas tahun. Mbok Rondo menanam biji itu, dan lahirlah seorang bayi cantik dari buah timun emas. Ia menamai gadis itu Timun Mas dan membesarkannya dengan penuh kasih, sambil menyimpan rahasia perjanjian.\n\nKetika Timun Mas hampir genap enam belas tahun, Buta Ijo datang menagih janji. Mbok Rondo meminta bantuan pertapa sakti yang memberi empat bungkusan: biji mentimun, jarum, garam, dan terasi, untuk melindungi diri. Saat dikejar raksasa, Timun Mas menaburkan bungkusan itu satu per satu. Biji mentimun menjadi hutan lebat, jarum menjelma hutan bambu runcing, garam menjadi lautan, dan terasi berubah menjadi lumpur panas. Buta Ijo akhirnya tenggelam dan lenyap. Timun Mas pulang selamat. Ia dan Mbok Rondo hidup bahagia, berterima kasih atas pertolongan dan keberanian yang menyelamatkan mereka.",
+                pesanMoral:"Legenda Timun Mas mengajarkan bahwa keberanian, kecerdikan, dan ketekunan dapat membantu mengatasi rintangan besar dan menghadapi kejahatan."
+    },
+
 ]

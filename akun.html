@@ -38,7 +38,7 @@
         <div class="profile-container">
             <!-- Kartu Akun -->
             <div class="account-card">
-                <div class="account-avatar">U</div> <!-- Avatar sederhana, bisa ganti dengan img user -->
+                <div class="account-avatar"></div> <!-- Avatar sederhana, bisa ganti dengan img user -->
                 <div class="account-info">
                     <h2 id="username"></h2>
                     <p class="email" id="email"></p>
@@ -49,23 +49,25 @@
             <!-- Bagian Bookmark -->
             <div class="bookmark-section">
                 <h2>Bookmark Cerita Saya</h2>
-                <div class="bookmark-grid" id="bookmarkList">
-                    <!-- Contoh Bookmark 1 -->
+                <div class="bookmark-grid" id="bookmarkList"></div>
+
+                <div class="no-bookmarks" id="noBookmarks">Belum ada bookmark. Mulai bookmark cerita favoritmu!</div>
+
+                <template id="bookmarkTemplate">
                     <div class="bookmark-item">
-                        <img src="" alt="Gambar Cerita Rakyat" class="bookmark-image">
+                        <img class="bookmark-image" src="" alt="">
                         <div class="bookmark-content">
                             <div class="bookmark-title"></div>
                             <div class="bookmark-province"></div>
                             <div class="bookmark-actions">
                                 <a href="" style="color: #4CAF50; text-decoration: none; font-size: 0.9rem;">Baca</a>
-                                <button class="btn-remove" onclick="removeBookmark(this)">Hapus</button>
+                                <button class="btn-remove">Hapus</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Jika tidak ada bookmark, tampilkan ini (sembunyikan via JS jika ada data) -->
-                <!-- <div class="no-bookmarks" id="noBookmarks">Belum ada bookmark. Mulai bookmark cerita favoritmu!</div> -->
+                </template>
             </div>
+
         </div>
     </div>
     <script src="js/auth.js"></script>

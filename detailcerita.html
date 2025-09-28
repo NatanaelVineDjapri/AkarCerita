@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div class="wrapper-nav">
@@ -55,11 +57,16 @@
                 <h2>Pesan Moral</h2>
                 <p id="detailMoral"></p>
             </div>
-            
-            <a href="" class="back-link" id="detailBacklink">← Kembali ke Daftar Cerita Rakyat</a>
+            <div class="detail-sub-bot">
+                <a href="" class="back-link" id="detailBacklink">Kembali ke Daftar Cerita Rakyat</a>
+                <button id="bookmarkBtn" class="bookmark-btn">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </button>
+            </div>
         </div>
     </div>
     <script src="js/listcerita.js"></script>
     <script src="js/cerita.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
