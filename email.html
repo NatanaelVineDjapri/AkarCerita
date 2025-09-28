@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akar Cerita</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="wrapper-nav">
+            <div class="container-nav">
+                <div class="container-nav-left">
+                    <div class="nav-image">
+                        <img src="Images/LogoAkarCerita.png" alt="LogoAkarCerita">
+                    </div>
+                    <div class="nav-left-title">
+                        <h1>AkarCerita <span>.</span></h1>
+                    </div>
+                </div>
+                <div class="container-nav-center">
+                    <ul>
+                        <li><a href="index.html#beranda">Beranda</a></li>
+                        <li><a href="index.html#tentangkami">Tentang kami</a></li>
+                        <li><a href="index.html#ceritarakyat">Cerita Rakyat</a></li>
+                        <li><a href="index.html#berita">Berita</a></li>
+                    </ul>
+                </div>
+                <div class="container-nav-right">
+                    <ul>
+                        <li><a href="auth.html#login">Login</a></li>
+                        <li><a href="auth.html#register" id="register">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div class="email-container">
+        <form id="contact-form">
+            <h1>Get in Touch</h1>
+            <p>Punya pertanyaan atau masukan? Jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
+            <div class="email-input">
+                <input type="text" name="name" placeholder="Nama" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Pesan..." required></textarea>
+                <button type="submit">Kirim</button>
+                <p id="status"></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/email.js"></script>
+</body>
+</html>

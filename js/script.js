@@ -70,33 +70,57 @@ window.addEventListener("scroll", function () {
 });
 
 /* ---------------- PETA INDONESIA ---------------- */
-petaObj.addEventListener("load", function () {
-  var svgDoc = petaObj.contentDocument;
-  var provinsi = svgDoc.querySelectorAll("path");
+var petaObj = document.getElementById("petaIndonesia");
 
-  for (var i = 0; i < provinsi.length; i++) {
-    var p = provinsi[i];
-    provinsi[i].style.fill = "#eb9800";
-    provinsi[i].style.stroke = "#643201";
-    p.style.cursor = "pointer";
+petaObj.addEventListener("load", function() {
+    var svgDoc = petaObj.contentDocument;
+    var provinsi = svgDoc.querySelectorAll("path");
 
-    // Klik
-    p.addEventListener("click", function () {
-      alert("Kamu klik: " + this.id);
-      // window.location = "provinsi.html?name=" + this.id;
-    });
+    for (var i = 0; i < provinsi.length; i++) {
+        var p = provinsi[i];
 
-    // Hover masuk
-    p.addEventListener("mouseover", function () {
-      this.style.fill = "orange";
-    });
+        p.style.fill = "#eb9800";
+        p.style.stroke = "#643201";
+        p.style.cursor = "pointer";
+        p.style.pointerEvents = "auto";
 
-    // Hover keluar
-    p.addEventListener("mouseout", function () {
-      this.style.fill = "";
-    });
-  }
+        // custom flag
+        p.clicked = false;
+
+        p.addEventListener("click", function() {
+            if (this.clicked) {
+                this.style.fill = "#eb9800";
+                this.clicked = false;
+            } else {
+                this.style.fill = "green";
+                this.clicked = true;
+            }
+
+            // tampilkan cerita
+           var provinsiName = this.getAttribute("title"); // ambil title
+            if(provinsiName) {
+                // redirect ke halaman cerita dengan nama provinsi
+                window.location.href = "ceritarakyat.html?prov=" + encodeURIComponent(provinsiName);
+            } else {
+                alert("Nama provinsi tidak ditemukan!");
+            }
+        });
+
+        p.addEventListener("mouseover", function() {
+            if (!this.clicked) {
+                this.style.fill = "orange";
+            }
+        });
+
+        p.addEventListener("mouseout", function() {
+            if (!this.clicked) {
+                this.style.fill = "#eb9800";
+            }
+        });
+    }
 });
+
+
 
 /* ---------------- TOP CERITA ---------------- */
 function renderTopCerita(containerSelector, data) {
@@ -118,8 +142,6 @@ function renderTopCerita(containerSelector, data) {
     container.appendChild(div);
   });
 }
-
-
 
 
 renderTopCerita(".topcerita-list", topCerita);
