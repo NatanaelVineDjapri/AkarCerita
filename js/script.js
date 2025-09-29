@@ -4,6 +4,7 @@ const nextBtn = document.getElementById("next");
 var petaObj = document.getElementById("petaIndonesia");
 const container = document.querySelector(".topcerita-list");
 const registerBottom = document.getElementById("register")
+const query = document.getElementById("searchInput")
 
 let currentIndex = 0;
 
@@ -19,14 +20,19 @@ function showSlide(index) {
   });
 }
 
+
 function startSlideShow() {
-  setInterval(function () {
+  slideInterval = setInterval(function () {
     currentIndex++;
     if (currentIndex >= slides.length) {
       currentIndex = 0;
     }
     showSlide(currentIndex);
   }, 20000);
+}
+
+function stopSlideShow() {
+  clearInterval(slideInterval);
 }
 
 function clickRegister(){
@@ -79,27 +85,22 @@ petaObj.addEventListener("load", function() {
     for (var i = 0; i < provinsi.length; i++) {
         var p = provinsi[i];
 
-        p.style.fill = "#eb9800";
-        p.style.stroke = "#643201";
+        p.style.fill = "#46ac34ff";    
+        p.style.stroke = "#3b6b1e";  
         p.style.cursor = "pointer";
         p.style.pointerEvents = "auto";
-
-        // custom flag
         p.clicked = false;
 
         p.addEventListener("click", function() {
             if (this.clicked) {
-                this.style.fill = "#eb9800";
                 this.clicked = false;
             } else {
                 this.style.fill = "green";
                 this.clicked = true;
             }
 
-            // tampilkan cerita
-           var provinsiName = this.getAttribute("title"); // ambil title
+           var provinsiName = this.getAttribute("title");
             if(provinsiName) {
-                // redirect ke halaman cerita dengan nama provinsi
                 window.location.href = "ceritarakyat.html?prov=" + encodeURIComponent(provinsiName);
             } else {
                 alert("Nama provinsi tidak ditemukan!");
@@ -108,19 +109,17 @@ petaObj.addEventListener("load", function() {
 
         p.addEventListener("mouseover", function() {
             if (!this.clicked) {
-                this.style.fill = "orange";
+                this.style.fill = "#3f992dff";
             }
         });
 
         p.addEventListener("mouseout", function() {
             if (!this.clicked) {
-                this.style.fill = "#eb9800";
+                this.style.fill = "#4eac3eff";
             }
         });
     }
 });
-
-
 
 /* ---------------- TOP CERITA ---------------- */
 function renderTopCerita(containerSelector, data) {
@@ -132,10 +131,14 @@ function renderTopCerita(containerSelector, data) {
     div.classList.add("topcerita-container");
 
     div.innerHTML = `
-      <div class="tk-img-cover-2"><img src="${cerita.img}" alt="${cerita.title}"></div>
+      <div class="tk-img-cover-2">
+        <img src="${cerita.img}" alt="${cerita.title}">
+      </div>
       <div class="top-cerita-title">
         <h3>${cerita.title}</h3>
         <p>${cerita.desc}</p>
+        <a href="detailcerita.html?id=${cerita.id}" class="topcerita-link">Selengkapnya</a>
+
       </div>
     `;
 
@@ -143,17 +146,41 @@ function renderTopCerita(containerSelector, data) {
   });
 }
 
-
 renderTopCerita(".topcerita-list", topCerita);
 
 function doSearch() {
-    var query = document.getElementById("searchInput").value.trim();
-    if(query !== ""){
-        window.location.href = "ceritarakyat.html?search=" + encodeURIComponent(query);
+    var querys = query.value.trim();
+    if(querys !== ""){
+        window.location.href = "ceritarakyat.html?search=" + encodeURIComponent(querys);
     }
+}
+
+function scrollToTop() {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: 'smooth' 
+    });
 }
 
 document.getElementById('searchBottom').addEventListener('click',function(){
   doSearch();
 })
+
+window.onscroll = function() {
+    const button = document.getElementById('buttonUp');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = 'flex';
+    } else{
+        button.style.display = 'none';
+    }
+};
+
+searchInput.addEventListener('focus', function() {
+  stopSlideShow();
+});
+
+
+searchInput.addEventListener('blur', function() {
+  startSlideShow();
+});
 

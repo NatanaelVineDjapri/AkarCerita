@@ -34,14 +34,34 @@
         </div>
     </div>
     <div class="ceritarakyat-wrapper2">
-        <h1 id="hasilProvince"></h1>
-        <div id="ceritarakyatContainer"></div>
+        <div class="ceritarakyat-filter">
+           <h1 id="hasilProvince"></h1>
+            <select id="themeFilter">
+                <option value="">Semua Tema</option>
+                <option value="Keberanian">Keberanian</option>
+                <option value="Kesedihan">Kesedihan</option>
+                <option value="Percintaan">Percintaan</option>
+                <option value="Mistis">Mistis</option>
+                <option value="Kesabaran">Kesabaran</option>
+                <option value="Pengorbanan">Pengorbanan</option>
+                <option value="Kesetiaan">Kesetiaan</option>
+                <option value="Kepahlawanan">Kepahlawanan</option>
+                <option value="Keindahan">Keindahan</option>
+            </select>
+        </div>
+        
+
+        <div class="slider-wrapper">
+            <div id="ceritarakyatContainer" class="slider-container"></div>
+            <div class="slider-buttons">
+                <button id="prevBtn">&#10094; Prev</button>
+                <button id="nextBtn">Next &#10095;</button>
+            </div>
+        </div>
 
         <template id="ceritaTemplate">
             <div class="ceritarakyat-container2">
-                <div class="ceritarakyat-img">
-                    <img src="" alt="Cerita Rakyat">
-                </div>
+                <div class="ceritarakyat-img"><img src="" alt="Cerita Rakyat"></div>
                 <div class="ceritarakyat-container2-content">
                     <h2 class="title"></h2>
                     <p class="province"></p>
@@ -50,6 +70,7 @@
                 </div>
             </div>
         </template>
+
     </div>
     <script src="js/listcerita.js"></script>
     <script src="js/cerita.js"></script>

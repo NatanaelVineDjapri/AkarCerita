@@ -96,6 +96,13 @@ function login(email, password){
         message: "Username atau password salah!"
     };
 }
+
+function logout(){
+    localStorage.removeItem('userln');
+    alert('Halo Sahabat  Kamu logout');
+    window.location.href = "index.html";
+}
+
 function isBookmarked() {
     if (!curUsername || !curUsername.bookmarks) {
         return false;
@@ -267,14 +274,27 @@ if(loginForm){
 }
 
 if (page === "akun.html") {
-    if(curUsername){
-        document.getElementById('username').innerText = curUsername.username;
-        document.getElementById('email').innerText = curUsername.email;
-        document.getElementById('userId').innerText = "ID: USER-" + curUsername.id;
+    const logoutBot =document.getElementById('logout');
+   
+    let usernameEl = document.getElementById('username');
+    let emailEl = document.getElementById('email');
+    let userIdEl = document.getElementById('userId');
+    let messageBook = document.getElementById('noBookmarks');
+    let notLogin = "Tidak Login"
+
+    if (curUsername) {
+        usernameEl.innerText = curUsername.username;
+        emailEl.innerText = curUsername.email;
+        userIdEl.innerText = "ID: USER-" + curUsername.id;
+        logoutBot.addEventListener('click',function(){
+        logout();
+       })
     } else {
-        document.getElementById('username').innerText = "Guest";
-        document.getElementById('email').innerText = "-";
-        document.getElementById('userId').innerText = "-";
+        usernameEl.innerText = "Guest";
+        emailEl.innerText = notLogin;
+        userIdEl.innerText = notLogin;
+        messageBook.innerText = "Harap login dulu untuk melihat Bookmark!"
+        logoutBot.style.display ="none"
     }
 }
 
