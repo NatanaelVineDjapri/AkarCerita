@@ -266,7 +266,6 @@ if(loginForm){
     })
 }
 
-
 if (page === "akun.html") {
     if(curUsername){
         document.getElementById('username').innerText = curUsername.username;

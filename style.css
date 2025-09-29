@@ -14,6 +14,7 @@ html,body{
     box-sizing: border-box;
     font-family: "Nanum Myeongjo", serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
 }
 
@@ -381,6 +382,7 @@ span{
     margin-bottom: 2rem;
 }
 .ceritarakyat-container {
+    width: 100%;
     display: flex;
     gap: 3rem;
     padding: 1.2rem 0 1.2rem;
@@ -911,13 +913,14 @@ span{
 }
 
 .ceritarakyat-wrapper2{
-    height: 88vh;
+    min-height: 88vh;
     margin: 12vh auto 0;
+    /* padding-bottom: 10rem; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    background: url(Images/Background/4.png);
+    background: url(Images/Background/7.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -930,7 +933,7 @@ span{
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    margin: 20px;
+    margin: 0.3rem 0 1.5rem;
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -938,8 +941,19 @@ span{
     box-sizing: border-box;
     padding: 2rem;
     gap: 0;
+    animation: fadeIn 0.4s ease-in-out 0.2s both;
+    flex-wrap: wrap;
+
 }
 
+#ceritarakyatContainer {
+    width: 100%;
+    /* margin: 12vh auto;    */
+    display: flex;
+    flex-wrap: wrap;     /* biar kalau kepenuhan turun */
+    gap: 2rem;           /* jarak antar card */
+    justify-content: center; 
+}
 .ceritarakyat-container2 img {
     width: 100%;
     height: 8rem;
@@ -982,6 +996,7 @@ span{
 
 #hasilProvince{
     color: var(--primary-color);
+    margin: 2rem 0rem;
 }
 
 .ceritarakyat-container2 p{
@@ -1003,8 +1018,8 @@ span{
     padding: 3rem;
     background: var(--fifth-color);
     border-radius: 0.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow lembut untuk efek card */
-    animation: fadeIn 0.8s ease-in-out; /* Animasi masuk halus */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    animation: fadeIn 0.8s ease-in-out; 
     position: relative;
     overflow: hidden;
     border: 2px solid var(--primary-color);
@@ -1183,12 +1198,10 @@ span{
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Kartu Akun */
 .profile-container{
     display: flex;
     align-items: stretch;
     justify-content: center;
-    /* flex-direction: column; */
     margin-top:12vh;
     min-height: 88vh;
     box-sizing: border-box;

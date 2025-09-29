@@ -26,7 +26,7 @@ function startSlideShow() {
       currentIndex = 0;
     }
     showSlide(currentIndex);
-  }, 10000);
+  }, 20000);
 }
 
 function clickRegister(){
@@ -145,3 +145,15 @@ function renderTopCerita(containerSelector, data) {
 
 
 renderTopCerita(".topcerita-list", topCerita);
+
+function doSearch() {
+    var query = document.getElementById("searchInput").value.trim();
+    if(query !== ""){
+        window.location.href = "ceritarakyat.html?search=" + encodeURIComponent(query);
+    }
+}
+
+document.getElementById('searchBottom').addEventListener('click',function(){
+  doSearch();
+})
+
