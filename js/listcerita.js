@@ -81,8 +81,6 @@ const topCerita = [
   }
 ];
 
-                
-                
 const ceritaRakyat = [
   {
     id: 1,

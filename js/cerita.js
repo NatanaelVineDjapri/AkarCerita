@@ -88,17 +88,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    if(themeFilter){
-        themeFilter.addEventListener("change", function() {
-            var selectedTheme = this.value;
-            var filteredList = currentList;
+    themeFilter.addEventListener("change", function() {
+        var selectedTheme = this.value;
+        var filteredList = currentList;
 
-            if(selectedTheme){
-                filteredList = currentList.filter(c => c.tema === selectedTheme);
-            }
+        if(selectedTheme){
+            filteredList = currentList.filter(c => c.tema === selectedTheme);
+        }
 
+        if(filteredList.length > 0){
+            container.style.display = "flex";
+            container.style.justifyContent = "flex-start";
+            container.style.alignItems = "stretch";
+            container.style.height = ""; 
             renderCeritaList(filteredList);
-        });
-    }
+        } else {
+            container.innerHTML = '<p style="color: white; text-align:center">Tidak ada cerita untuk tema "' + selectedTheme + '"</p>';
+            container.style.display = "flex";
+            container.style.justifyContent = "center";
+            container.style.alignItems = "center";
+            container.style.height = "200px"; 
+        }
+    });
+
 
 });
