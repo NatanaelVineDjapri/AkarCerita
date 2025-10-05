@@ -5,49 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div class="wrapper-nav">
         <div class="container-nav">
-            <div class="container-nav-left">
-                <div class="nav-image">
-                    <img src="Images/LogoAkarCerita.png" alt="LogoAkarCerita">
+                <div class="container-nav-left">
+                    <div class="nav-image">
+                        <img src="Images/LogoAkarCerita.png" alt="LogoAkarCerita">
+                    </div>
+                    <div class="nav-left-title">
+                        <h1>AkarCerita <span>.</span></h1>
+                    </div>
                 </div>
-                <div class="nav-left-title">
-                    <h1>AkarCerita <span>.</span></h1>
+                <div class="container-nav-mix">
+                    <div class="container-nav-center">
+                        <ul>
+                            <li><a href="index.html#beranda">Beranda</a></li>
+                            <li><a href="index.html#tentangkami">Tentang kami</a></li>
+                            <li><a href="index.html#ceritarakyat">Cerita Rakyat</a></li>
+                            <li><a href="akun.html">Akun</a></li>
+                        </ul>
+                    </div>
+                    <div class="container-nav-right">
+                        <ul>
+                            <li><a href="auth.html#login">Login</a></li>
+                            <li><a href="auth.html#register" id="register">Register</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="container-nav-center">
-                <ul>
-                    <li><a href="index.html#beranda">Beranda</a></li>
-                    <li><a href="index.html#tentangkami">Tentang kami</a></li>
-                    <li><a href="index.html#ceritarakyat">Cerita Rakyat</a></li>
-                    <li><a href="akun.html">Akun</a></li>
-                </ul>
-            </div>
-            <div class="container-nav-right">
-                <ul>
-                    <li><a href="auth.html#login">Login</a></li>
-                    <li><a href="auth.html#register" id="register">Register</a></li>
-                </ul>
-            </div>
+                <div class="container-nav-hamburger">
+                    <ul>
+                        <li><ion-icon name="menu-outline"></ion-icon></li>
+                    </ul>
+                </div>
         </div>
     </div>
     <div class="ceritarakyat-wrapper2">
         <div class="ceritarakyat-filter">
            <h1 id="hasilProvince"></h1>
-            <select id="themeFilter">
-                <option value="">Semua Tema</option>
-                <option value="Keberanian">Keberanian</option>
-                <option value="Kesedihan">Kesedihan</option>
-                <option value="Percintaan">Percintaan</option>
-                <option value="Mistis">Mistis</option>
-                <option value="Kesabaran">Kesabaran</option>
-                <option value="Pengorbanan">Pengorbanan</option>
-                <option value="Kesetiaan">Kesetiaan</option>
-                <option value="Kepahlawanan">Kepahlawanan</option>
-                <option value="Keindahan">Keindahan</option>
-            </select>
+            <div id="themeFilterCustom" class="custom-select">
+            <div class="select-display" data-value="">Semua Tema</div>
+            
+            <div class="select-options"> 
+                <a href="#" data-value="" class="option-item">Semua Tema</a>
+                <a href="#" data-value="Keberanian" class="option-item">Keberanian</a>
+                <a href="#" data-value="Kesedihan" class="option-item">Kesedihan</a>
+                <a href="#" data-value="Percintaan" class="option-item">Percintaan</a>
+                <a href="#" data-value="Mistis" class="option-item">Mistis</a>
+                <a href="#" data-value="Kesabaran" class="option-item">Kesabaran</a>
+                <a href="#" data-value="Pengorbanan" class="option-item">Pengorbanan</a>
+                <a href="#" data-value="Kesetiaan" class="option-item">Kesetiaan</a>
+                <a href="#" data-value="Kepahlawanan" class="option-item">Kepahlawanan</a>
+                <a href="#" data-value="Keindahan" class="option-item">Keindahan</a>
+            </div>
         </div>
         
 
@@ -74,5 +86,6 @@
     </div>
     <script src="js/listcerita.js"></script>
     <script src="js/cerita.js"></script>
+        <script src="js/navbar.js"></script>
 </body>
 </html>

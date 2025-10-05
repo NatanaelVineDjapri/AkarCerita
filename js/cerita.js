@@ -88,28 +88,62 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    themeFilter.addEventListener("change", function() {
-        var selectedTheme = this.value;
+    const dropdown = document.getElementById('themeFilterCustom');
+    const display = dropdown.querySelector('.select-display');
+    const optionsContainer = dropdown.querySelector('.select-options');
+    const optionItems = dropdown.querySelectorAll('.option-item');
+
+    function filterAndRender(selectedTheme) {
         var filteredList = currentList;
 
-        if(selectedTheme){
+        if (selectedTheme) {
             filteredList = currentList.filter(c => c.tema === selectedTheme);
         }
 
-        if(filteredList.length > 0){
+        if (filteredList.length > 0) {
             container.style.display = "flex";
             container.style.justifyContent = "flex-start";
             container.style.alignItems = "stretch";
             container.style.height = ""; 
-            renderCeritaList(filteredList);
+            
+            renderCeritaList(filteredList); 
         } else {
-            container.innerHTML = '<p style="color: white; text-align:center">Tidak ada cerita untuk tema "' + selectedTheme + '"</p>';
+            container.innerHTML = '<p style="color: white; text-align:center">Tidak ada cerita untuk tema "' + (selectedTheme || 'Semua Tema') + '"</p>';
             container.style.display = "flex";
             container.style.justifyContent = "center";
             container.style.alignItems = "center";
             container.style.height = "200px"; 
         }
+    }
+
+
+    display.addEventListener('click', () => {
+        optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
     });
+
+    optionItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const selectedValue = item.getAttribute('data-value');
+            const selectedText = item.textContent;
+
+            display.textContent = selectedText;
+            display.setAttribute('data-value', selectedValue);
+
+            optionsContainer.style.display = 'none';
+
+            filterAndRender(selectedValue); 
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            optionsContainer.style.display = 'none';
+        }
+    });
+
+    filterAndRender('');
 
 
 });
