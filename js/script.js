@@ -59,19 +59,20 @@ prevBtn.addEventListener("click", function () {
 showSlide(currentIndex);
 startSlideShow();
 
-/* ---------------- NAVBAR SCROLL ---------------- */
 let lastScrollTop = 0;
 let navbar = document.querySelector(".container-nav");
+let mobileMenu = document.querySelector(".container-nav-mix");
 
 window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    navbar.style.top = "-15vh";
-  } else {
-    navbar.style.top = "0";
-  }
-
+    if (!mobileMenu.classList.contains("active")) {
+        if (scrollTop > lastScrollTop) {
+            navbar.style.top = "-15vh";
+        } else {
+            navbar.style.top = "0";
+        }
+    }
   lastScrollTop = scrollTop;
 });
 
@@ -184,3 +185,18 @@ searchInput.addEventListener('blur', function() {
   startSlideShow();
 });
 
+const hamburger = document.querySelector('.container-nav-hamburger ion-icon');
+const menuMix = document.querySelector('.container-nav-mix');
+
+hamburger.addEventListener('click', function(event) {
+    event.stopPropagation();
+    menuMix.classList.toggle('active');
+});
+
+document.addEventListener('click', function(event) {
+    if (menuMix.classList.contains('active')) {
+        if (!menuMix.contains(event.target) && !hamburger.contains(event.target)) {
+            menuMix.classList.remove('active');
+        }
+    }
+});

@@ -57,13 +57,22 @@ html,body{
 }
 
 .container-nav-center ul,
-.container-nav-right ul{
+.container-nav-right ul,
+.container-nav-hamburger ul{
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-
+.container-nav-hamburger{
+    display: none;
+    cursor: pointer;
+}
+.container-nav-hamburger ul li ion-icon{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: var(--fifth-color);
+}
 
 .container-nav-center ul li a{
    text-decoration: none;
@@ -1619,6 +1628,7 @@ span{
     font-size: 0.9rem;
     color: var(--third-color);
 }
+
 .btn-remove {
     background: var(--third-color);
     color: white;
@@ -1641,3 +1651,52 @@ span{
     padding: 2.5rem;
 }
 
+@media screen and (max-width: 768px){
+    html{
+        font-size: 85%;
+    }
+
+    .container-nav-center ul,
+    .container-nav-right ul{
+        padding-left: 0;
+    }
+
+    .container-nav-hamburger{
+        display: block;
+    }
+
+    .container-nav-hamburger ul{
+        padding: 0;
+    }
+
+    .container-nav{
+        padding: 2rem 3rem;
+    }
+
+    .container-nav-mix {
+        display: none;
+    }
+
+   .container-nav-mix.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 12vh;
+        right: 0;
+        width: 12rem;
+        height: 100vh;
+        background-color: var(--fourth-color);
+        box-sizing: border-box;
+        padding: 1rem;
+        box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+        transform: translateX(0);
+        z-index: 100;
+    }
+
+    .container-nav-mix.active .container-nav-center ul,
+    .container-nav-mix.active .container-nav-right ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

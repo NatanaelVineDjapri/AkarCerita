@@ -118,9 +118,9 @@ function isBookmarked() {
 
 function updateBookmarkIcon() {
     if(isBookmarked()){
-        bookmarkBtn.innerHTML = '<ion-icon name="bookmark"></ion-icon>'; // filled
+        bookmarkBtn.innerHTML = '<ion-icon name="bookmark"></ion-icon>'; 
     } else {
-        bookmarkBtn.innerHTML = '<ion-icon name="bookmark-outline"></ion-icon>'; // outline
+        bookmarkBtn.innerHTML = '<ion-icon name="bookmark-outline"></ion-icon>'; 
     }
 }
 
