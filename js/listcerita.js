@@ -8,7 +8,7 @@ const topCerita = [
     tema:"Kesedihan"
   },
   {
-    id:"36",
+    id:"22",
     title: "Legenda Danau Toba",
     desc: "Asal-usul Danau Toba dan Pulau Samosir di Sumatera Utara.",
     img: "Images/TopCeritaRakyat/2.jpeg",
@@ -16,7 +16,7 @@ const topCerita = [
     tema:"Kesedihan"
   },
   { 
-    id:"",
+    id:"61",
     title: "Legenda Aji Saka",
     desc: "Aji Saka membawa peradaban dan aksara ke Tanah Jawa.",
     img: "Images/TopCeritaRakyat/3.jpeg",
@@ -40,7 +40,7 @@ const topCerita = [
     tema:"Kesedihan"
   },
   { 
-    id:"",
+    id:"62",
     title: "Bawang Merah Bawang Putih",
     desc: "Dua saudari bertolak belakang, satu baik, satu buruk hati.",
     img: "Images/TopCeritaRakyat/6.jpeg",
@@ -87,7 +87,7 @@ const ceritaRakyat = [
     nama: "Legenda Roro Jonggrang",
     deskripsi: "Cerita dari Jawa Tengah tentang seorang putri cantik yang meminta 1000 candi dibangun dalam semalam sebagai syarat pernikahan. Kisah ini mengajarkan tentang kecerdikan dan keadilan.",
     provinsi: "Jawa Tengah",
-    image: "images/cerita/jonggrang.jpg",
+    image: "Images/TopCeritaRakyat/4.jpeg",
     genre:"Legenda asal-usul",
     tema:"Kesedihan",
     isi: "Pada zaman dahulu kala, di tanah Jawa, berdirilah dua kerajaan besar yang saling bermusuhan: Kerajaan Pengging dan Kerajaan Boko. Prabu Boko, raja Kerajaan Boko, terkenal gagah perkasa namun berhati kejam. Keinginannya untuk memperluas kekuasaan membuatnya menyerang Kerajaan Pengging. Pertempuran dahsyat pun terjadi. Prabu Boko akhirnya tewas di tangan seorang ksatria sakti dari Pengging bernama Bandung Bondowoso. Kemenangan itu membawa Bandung Bondowoso ke istana Kerajaan Boko. Di sana ia bertemu dengan putri Prabu Boko yang cantik jelita bernama Roro Jonggrang. Wajah sang putri bagaikan bulan purnama, membuat Bandung Bondowoso jatuh hati seketika. Ia pun meminang Roro Jonggrang untuk menjadi permaisurinya. Namun Roro Jonggrang menolak dalam hati. Ia masih berduka atas kematian ayahnya dan tak rela dinikahi oleh orang yang telah mengalahkan keluarganya. Meski begitu, ia tidak bisa menolak pinangan itu secara terang-terangan karena takut akan kemarahan Bandung Bondowoso. Dengan akal cerdik, Roro Jonggrang mengajukan syarat yang tampak mustahil. “Baiklah, Tuan. Aku akan menerima pinanganmu bila Tuan sanggup membangun seribu candi dan dua sumur raksasa hanya dalam satu malam,” ucapnya. Bandung Bondowoso tidak gentar. Dengan kesaktian yang dimilikinya, ia memanggil pasukan jin untuk membantunya. Malam itu juga, jin-jin bekerja tanpa henti. Satu demi satu candi berdiri megah, dan sumur pun digali dengan cepat. Melihat pekerjaannya hampir selesai sebelum fajar, Roro Jonggrang menjadi cemas. Ia memutar otak untuk menggagalkan usaha Bandung Bondowoso. Segera ia memerintahkan para dayang menumbuk padi dan menyalakan obor di sisi timur, sehingga langit tampak kemerahan seolah-olah matahari akan terbit.\n\nPara jin mengira pagi telah tiba. Mereka pun berhenti bekerja dan menghilang. Bandung Bondowoso terkejut ketika mengetahui candi yang selesai hanya berjumlah sembilan ratus sembilan puluh sembilan. Menyadari dirinya ditipu, amarahnya pun memuncak. Ia menatap Roro Jonggrang dengan sorot mata penuh murka dan mengutuknya, Kau licik, Roro Jonggrang! Maka jadilah kau batu untuk melengkapi candi yang keseribu! Sekejap tubuh sang putri berubah menjadi arca batu yang indah. Konon arca itu kini dikenal sebagai arca Dewi Durga di dalam kompleks Candi Prambanan. Sedangkan candi-candi lain di sekitarnya disebut Candi Sewu, yang berarti “seribu candi”. ",
@@ -109,7 +109,7 @@ const ceritaRakyat = [
     nama: "Sangkuriang",
     deskripsi: "sangkuriang adalah cerita rakyat dari Jawa Barat yang mengisahkan seorang pemuda yang tanpa sadar jatuh cinta pada ibunya sendiri, Dayang Sumbi. Ketika identitas mereka terungkap, Dayang Sumbi menolak lamaran Sangkuriang dan memberinya tugas mustahil membendung sungai dan membuat perahu dalam semalam, yang akhirnya gagal dan menciptakan Gunung Tangkuban Perahu.",
     provinsi: "Jawa Barat",
-    image: "images/cerita/sangkuriang.jpg",
+    image: "Images/TopCeritaRakyat/5.jpeg",
     genre:"Legenda asal-usul",
     tema:"Kesedihan",
     isi: "Dahulu kala, hiduplah seorang putri cantik bernama Dayang Sumbi. Suatu hari ia menemukan kain tenunnya jatuh, lalu bersumpah akan menikahi siapa pun yang mengembalikannya. Seekor anjing pemburu bernama Tumang, jelmaan dewa, mengambil kain itu. Karena sumpahnya sendiri, Dayang Sumbi menikah dengan Tumang dan kelak melahirkan seorang putra bernama Sangkuriang. Sangkuriang tumbuh gagah dan pandai berburu, tetapi ia tidak tahu bahwa Tumang adalah ayahnya. Saat berburu, ia marah karena Tumang tidak menuruti perintahnya untuk mengejar buruan, hingga tanpa sadar ia membunuh Tumang. Saat pulang, Dayang Sumbi sangat marah dan memukul kepala Sangkuriang dengan sendok kayu. Sangkuriang pun pergi mengembara.\n\nBertahun-tahun kemudian, Sangkuriang kembali sebagai pemuda tampan. Ia bertemu Dayang Sumbi, yang tetap awet muda berkat anugerah para dewa. Mereka saling jatuh cinta, tanpa mengetahui hubungan darah mereka. Saat hendak menikah, Dayang Sumbi melihat bekas luka di kepala Sangkuriang dan menyadari bahwa pemuda itu adalah anaknya. Untuk menggagalkan pernikahan, Dayang Sumbi memberi syarat mustahil: Sangkuriang harus membuat danau besar dan perahu raksasa dalam satu malam. Dengan kesaktiannya, Sangkuriang memanggil jin dan hampir menyelesaikan pekerjaan. Dayang Sumbi pun berdoa agar fajar datang lebih cepat. Langit pun memerah, membuat para jin kabur. Sangkuriang marah, menendang perahu yang dibuatnya hingga terbalik menjadi Gunung Tangkuban Perahu, yang artinya “perahu terbalik”.",
@@ -164,7 +164,7 @@ const ceritaRakyat = [
     nama: "Nyi Roro Kidul",
     deskripsi: "Nyi Roro Kidul adalah tokoh legendaris dalam budaya Jawa yang dikenal sebagai Ratu Pantai Selatan, penguasa laut selatan yang memiliki kekuatan gaib dan aura mistis. Ia dipercaya menjaga keseimbangan alam dan sering dikaitkan dengan mitos larangan memakai pakaian hijau di Pantai Selatan karena warna itu dianggap miliknya.",
     provinsi: "DI Yogyakarta",
-    image: "images/cerita/rorokidul.jpg",
+    image: "Images/TopCeritaRakyat/8.jpeg",
     genre:"Legenda rakyat",
     tema:"Mistis",
     isi: "Di tanah Jawa, terdapat sebuah ratu cantik bernama Nyi Roro Kidul, penguasa laut selatan yang terkenal sakti mandraguna. Konon, ia lahir dari keluarga bangsawan, namun memiliki kekuatan gaib yang membuatnya bisa menguasai samudra. Setiap orang yang melintas di pesisir selatan diyakini akan mendapat perlindungan atau marabahaya dari sang ratu, tergantung niat dan sikap mereka. Nyi Roro Kidul dikenal sangat cantik dan anggun, serta memiliki kerajaan bawah laut yang indah dan luas. Banyak cerita mengatakan bahwa ia sering menampakkan diri dalam bentuk manusia atau ombak untuk menolong orang yang tersesat di laut, tetapi juga bisa menenggelamkan mereka yang sombong atau tidak menghormati laut.\n\nSelain itu, Nyi Roro Kidul juga sering dikaitkan dengan raja-raja Mataram dan keraton Yogyakarta. Konon, raja yang memerintah harus menjaga hubungan baik dengan sang ratu agar wilayahnya aman dari bencana laut. Banyak ritual dan upacara dilakukan sebagai tanda penghormatan kepada penguasa laut selatan ini. Legenda Nyi Roro Kidul hingga kini tetap hidup dalam budaya Jawa, menjadi simbol keindahan, kekuatan, dan kewaspadaan manusia terhadap alam.",
@@ -241,7 +241,7 @@ const ceritaRakyat = [
     nama: "Putri Mandalika",
     deskripsi: "Putri Mandalika adalah legenda dari Lombok, Nusa Tenggara Barat, tentang seorang putri cantik yang mengorbankan diri demi mencegah perang antar kerajaan. Ia melompat ke laut dan jasadnya dipercaya berubah menjadi cacing laut (nyale), yang kemudian diperingati dalam tradisi Bau Nyale setiap tahun.",
     provinsi: "Nusa Tenggara Barat",
-    image: "images/cerita/mandalika.jpg",
+    image: "Images/TopCeritaRakyat/10.jpeg",
     genre:"Legenda asal-usul",
     tema:"Pengorbanan",
     isi: "Di Lombok, hiduplah seorang putri cantik bernama Putri Mandalika, yang dikenal lemah lembut, bijaksana, dan dicintai rakyatnya. Banyak pangeran dari berbagai kerajaan datang untuk melamarnya, tetapi Putri Mandalika tidak ingin memihak satu pangeran saja karena ia mencintai seluruh rakyatnya dan ingin menjaga perdamaian di kerajaan. Pangeran-pangeran itu bersaing memperebutkan Putri Mandalika, bahkan sampai mengancam keamanan desa. Menyadari situasi yang semakin berbahaya, Putri Mandalika merasa bingung dan sedih karena ia tidak ingin ada yang terluka akibat cintanya. Ia pun memutuskan mengambil jalan yang luar biasa untuk menghindari konflik.\n\nSuatu malam, Putri Mandalika menari di tepi pantai hingga cahaya bulan memantul di air laut. Dengan penuh keberanian, ia melompat ke laut dan tenggelam di tengah ombak. Ajaibnya, tubuhnya berubah menjadi cacing kecil berwarna-warni yang disebut nyale, yang muncul setiap tahun di laut Lombok. Rakyat Lombok percaya bahwa kemunculan nyale adalah tanda keberkahan dari Putri Mandalika. Mereka kemudian mengadakan upacara bau nyale sebagai wujud penghormatan dan rasa syukur atas pengorbanan sang putri. Kisah ini menjadi simbol perdamaian, pengorbanan, dan cinta Putri Mandalika kepada rakyatnya.",
@@ -274,7 +274,7 @@ const ceritaRakyat = [
     nama: "Malin Kundang",
     deskripsi: "Dari Sumatera Barat, kisah anak durhaka yang dikutuk menjadi batu oleh ibunya. Mengajarkan nilai bakti kepada orang tua dalam tradisi Minangkabau.",
     provinsi: "Sumatera Barat",
-    image: "images/cerita/malinkundang.jpg",
+    image: "Images/TopCeritaRakyat/1.jpeg",
     genre:"Legenda asal-usul",
     tema:"Kesedihan",
     isi: "Dahulu, di sebuah desa pesisir Sumatera Barat, hiduplah seorang anak laki-laki miskin bernama Malin Kundang bersama ibunya yang sangat menyayanginya. Sejak kecil, Malin dikenal cerdas dan rajin, tetapi ia bercita-cita menjadi orang kaya agar bisa mengangkat derajat hidupnya. Ibunya selalu menasihati agar ia tetap rendah hati dan tidak melupakan keluarga, tetapi Malin sering mengabaikan nasihat itu. Ketika dewasa, Malin memutuskan pergi merantau untuk mencari kekayaan. Ia berjanji pada ibunya bahwa suatu hari akan kembali. Di perantauan, Malin bekerja keras dan akhirnya menjadi pedagang kaya yang sukses. Namun, keserakahan dan rasa malu membuatnya lupa asal-usul dan ibunya yang menunggu di desa.\n\nSuatu hari, kapal Malin kembali ke desa untuk berbisnis. Ibunya berlari menyambutnya dengan penuh harap dan kasih sayang. Namun, Malin malu mengakui ibunya di depan istrinya yang kaya dan para pelayan. Ia menolak ibunya dengan kasar, bahkan menuduhnya mengganggu nama baiknya. Kesombongan Malin memicu kutukan alam. Ibunya yang sedih dan putus asa memohon kepada Tuhan, dan tiba-tiba Malin berubah menjadi batu di tepi pantai. Kapal dan harta bendanya ikut hancur. Desa menjadi saksi bisu dari akibat kesombongan dan durhaka terhadap orang tua.",
@@ -318,7 +318,7 @@ const ceritaRakyat = [
     nama: "Danau Toba",
     deskripsi: "Danau Toba adalah danau vulkanik terbesar di Indonesia yang dipercaya berasal dari kisah seorang pemuda yang menikahi wanita jelmaan ikan dengan syarat tak mengungkap asal-usulnya. Ketika janji dilanggar, sang istri kembali ke danau bersama anaknya, dan tempat itu berubah menjadi danau luas yang kini dikenal sebagai Danau Toba",
     provinsi: "Sumatera Utara",
-    image: "Images/cerita/danautoba.jpg",
+    image: "Images/TopCeritaRakyat/2.jpeg",
     genre:"Legenda asal-usul",
     tema:"Kesedihan",
     isi: "Dahulu, di tanah Su si matera Utara, hiduplah seorang pemuda bernama Toba yang jujur, rajin, dan berhati mulia. Suatu hari, Toba menangkap ikan besar di sungai dan membawanya pulang untuk dimasak. Namun, ketika ia membuka ikan itu, ternyata di dalamnya ada seorang gadis cantik yang kemudian menjadi istrinya. Mereka menikah dan hidup bahagia, dikaruniai seorang anak laki-laki. Suatu hari, Toba pergi keluar rumah dan meninggalkan anaknya sendiri bersama istrinya. Karena penasaran, sang anak melanggar larangan orang tuanya dan membuka rahasia yang seharusnya tidak disentuh. Tiba-tiba, ibunya berubah wujud dan kembali menjadi ikan, sementara anaknya dibawa pergi ke dalam air. Toba sangat sedih melihat peristiwa itu dan berlari mencari keluarga yang hilang.\n\nToba menangis sangat dalam, sehingga air matanya membanjiri lembah dan membentuk sebuah danau yang luas. Air dari Danau Toba dipercaya berasal dari kesedihan Toba yang mendalam karena kehilangan istri dan anaknya. Anak Toba kemudian muncul kembali sebagai seorang pemuda yang dewasa, tetapi tetap tinggal di pulau kecil di tengah danau yang dikenal sebagai Pulau Samosir. Masyarakat setempat percaya bahwa Danau Toba dan Pulau Samosir adalah hasil dari mukjizat alam dan kasih sayang seorang ayah terhadap keluarganya. Kisah ini diceritakan turun-temurun untuk mengingat pentingnya ketaatan, kesabaran, dan kasih sayang dalam keluarga.",
@@ -740,5 +740,27 @@ const ceritaRakyat = [
   tema:"Kesedihan",
   isi:"Alkisah, di sebuah desa di sekitar Danau Toba, hiduplah seorang gadis cantik yang tinggal bersama kedua orang tuanya. Kehidupan mereka sederhana, namun penuh kasih sayang. Gadis itu terkenal rajin, baik hati, dan dicintai oleh masyarakat sekitar. Namun, orang tuanya tiba-tiba berniat menjodohkannya dengan seorang pria kaya dari desa lain. Sayangnya, sang gadis tidak setuju. Ia sudah memiliki seseorang yang ia cintai, tetapi orang tuanya tidak mau mendengar alasannya. Perjodohan tetap dipaksakan demi harta dan kedudukan. Karena putus asa, gadis itu memutuskan untuk melarikan diri dari rumah pada malam hari sebelum pesta pernikahan berlangsung.\n\nIa berlari menuju tepi Danau Toba, melewatidan jalan berbatu. Namun, ayahnya yang marah besar mengejarnya sambil berteriak-teriak. Dalam pelariannya, gadis itu hampir jatuh ke tebing. Dengan panik, ia berdoa kepada Tuhan agar diselamatkan dari penderitaan dan tekanan yang ia alami. Tiba-tiba, doa itu terkabul dengan cara yang mengejutkan. Tubuh sang gadis perlahan berubah menjadi batu. Ia tidak lagi bisa bergerak, dan akhirnya seluruh tubuhnya membeku. Batu itu kemudian tergantung di tebing dekat Danau Toba, sehingga dikenal dengan nama Batu Gantung. Hingga kini, Batu Gantung masih dapat dilihat oleh siapa saja yang berkunjung ke Danau Toba. Legenda ini diwariskan turun-temurun oleh masyarakat Batak sebagai pengingat bahwa cinta dan kebebasan tidak boleh dipaksakan, serta bahwa doa orang yang teraniaya memiliki kekuatan besar.",
   pesanMoral:"Legenda Batu Gantung mengajarkan bahwa Jangan memaksakan kehendak kepada orang lain, karena setiap orang berhak menentukan jalan hidupnya sendiri."
-  }
+  },
+  {
+    id: 61,
+    nama: "Aji Saka",
+    deskripsi: "Aji Saka adalah legenda dari Jawa Tengah tentang tokoh bijak yang membawa aksara dan peradaban ke tanah Jawa. Cerita ini mengajarkan kecerdikan, keberanian, dan keadilan dalam menghadapi rintangan.",
+    provinsi: "Jawa Tengah",
+    image: "Images/TopCeritaRakyat/3.jpeg",
+    genre: "Legenda rakyat",
+    tema: "Kebijaksanaan",
+    isi: "Pada zaman dahulu, di tanah Jawa terdapat raksasa jahat bernama Buta Ijo yang menindas rakyat dan membuat kehidupan mereka menderita. Rakyat hidup dalam ketakutan karena Buta Ijo sangat kuat dan kejam. Untuk membawa perubahan, datanglah seorang pemuda bijak bernama Aji Saka, yang dikenal memiliki kecerdikan, keberanian, dan ilmu pengetahuan yang luar biasa.\n\nAji Saka menantang Buta Ijo dan menggunakan kepandaiannya untuk mengalahkan raksasa itu. Ia tidak hanya mengandalkan kekuatan fisik, tetapi juga strategi cerdik yang membuat Buta Ijo tak berdaya. Setelah berhasil, rakyat pun bebas dari teror dan mulai hidup tenang. Aji Saka kemudian memimpin kerajaan dengan adil dan bijaksana.\n\nSelain menegakkan keadilan, Aji Saka memperkenalkan aksara Jawa sebagai sarana komunikasi dan penyebaran ilmu pengetahuan. Ia mengajarkan rakyat cara menulis, membaca, dan menyimpan pengetahuan agar peradaban Jawa dapat berkembang. Aksara ini menjadi salah satu warisan budaya penting yang hingga kini masih digunakan dan dihargai.\n\nLegenda Aji Saka juga mengandung kisah tentang kesetiaan dan kepatuhan, melalui tokoh-tokoh pengawalnya yang taat dan setia. Kisah ini menekankan bahwa keberanian harus dibarengi dengan kebijaksanaan dan keadilan. Perjuangan Aji Saka menjadi inspirasi bahwa perubahan positif dapat dicapai melalui kecerdikan, ilmu, dan moral yang benar.\n\nCerita Aji Saka menjadi simbol lahirnya aksara Jawa dan menunjukkan bahwa kebaikan dan kebijaksanaan selalu lebih kuat daripada kekerasan. Legenda ini mengajarkan pentingnya ilmu pengetahuan, kejujuran, serta keberanian dalam menegakkan keadilan bagi masyarakat.",
+    pesanMoral: "Legenda Aji Saka mengajarkan bahwa kecerdikan, kebijaksanaan, dan keberanian lebih penting daripada kekerasan, serta pentingnya menegakkan keadilan dan menyebarkan ilmu pengetahuan untuk kesejahteraan masyarakat."
+  },
+  {
+    id: 62,
+    nama: "Bawang Merah dan Bawang Putih",
+    deskripsi: "Bawang Merah dan Bawang Putih adalah legenda dari Jawa Tengah tentang dua saudara tiri dengan sifat berbeda. Cerita ini mengajarkan nilai kebaikan, kesabaran, dan keadilan.",
+    provinsi: "Jawa Tengah",
+    image: "Images/TopCeritaRakyat/6.jpeg",
+    genre: "Legenda rakyat",
+    tema: "Kebaikan dan keadilan",
+    isi: "Di sebuah desa, hiduplah dua saudara tiri: Bawang Putih yang lembut, sabar, dan pekerja keras, serta Bawang Merah yang pemalas, iri hati, dan sering berlaku kasar. Bawang Putih selalu membantu ibu tirinya dengan setia, membersihkan rumah, dan merawat tanaman, sementara Bawang Merah lebih suka bersantai dan menguasai segala sesuatu.\n\nSuatu hari, Bawang Putih menemukan sebuah benda ajaib di sungai yang membawanya kepada keberuntungan dan kekayaan. Bawang Putih tetap rendah hati dan tidak sombong, menggunakan keberuntungan itu untuk membantu orang-orang di sekitarnya. Sementara itu, Bawang Merah yang serakah mencoba merebut benda itu dengan tipu muslihat, tetapi selalu gagal karena kebaikan hati Bawang Putih melindunginya.\n\nCerita ini berlanjut dengan berbagai ujian dan kejadian ajaib yang menunjukkan bahwa kejujuran dan kerja keras Bawang Putih selalu membuahkan hasil, sedangkan keserakahan Bawang Merah hanya membawa kesulitan. Orang-orang di desa pun melihat perbedaan sikap kedua saudara tiri itu dan mulai menghormati Bawang Putih.\n\nPada akhirnya, Bawang Merah menyadari kesalahannya dan belajar menghargai kebaikan. Bawang Putih hidup bahagia dengan keberhasilan yang ia raih melalui kerja keras, kesabaran, dan kebaikan hati. Cerita ini menunjukkan bahwa sifat baik hati dan jujur selalu akan dihargai.\n\nLegenda Bawang Merah dan Bawang Putih menjadi simbol bahwa kebaikan, kesabaran, dan kejujuran akan selalu membawa kebahagiaan, sedangkan iri hati, kemalasan, dan keserakahan hanya menimbulkan penderitaan.",
+    pesanMoral: "Legenda Bawang Merah dan Bawang Putih mengajarkan bahwa kebaikan, kesabaran, dan kejujuran membawa kebahagiaan, sedangkan iri hati dan keserakahan membawa penderitaan."
+  },
 ];
