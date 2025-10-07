@@ -107,7 +107,7 @@ const ceritaRakyat = [
   {
     id: 3,
     nama: "Sangkuriang",
-    deskripsi: "sangkuriang adalah cerita rakyat dari Jawa Barat yang mengisahkan seorang pemuda yang tanpa sadar jatuh cinta pada ibunya sendiri, Dayang Sumbi. Ketika identitas mereka terungkap, Dayang Sumbi menolak lamaran Sangkuriang dan memberinya tugas mustahil membendung sungai dan membuat perahu dalam semalam, yang akhirnya gagal dan menciptakan Gunung Tangkuban Perahu.",
+    deskripsi: "sangkuriang adalah cerita rakyat dari Jawa Barat yang mengisahkan seorang pemuda yang tanpa sadar jatuh cinta pada ibunya sendiri, Dayang Sumbi. ",
     provinsi: "Jawa Barat",
     image: "Images/TopCeritaRakyat/5.jpeg",
     genre:"Legenda asal-usul",
