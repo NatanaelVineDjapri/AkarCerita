@@ -442,9 +442,13 @@ span{
     max-width: 40rem;    
     height: 18rem;
     position: relative;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
-    background: linear-gradient(to bottom, #97c7ee, #87bce7);
+}
+
+#petaIndonesia{
+     background: linear-gradient(to bottom, #97c7ee, #87bce7);
+     margin-bottom: 1rem;
     
 }
 
@@ -794,7 +798,7 @@ span{
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    display: none;
+    display: flex;
     align-items: center;
     gap: 6px;
     font-weight: 500;
@@ -1127,6 +1131,8 @@ span{
     box-shadow: 6px 8px 10px rgba(0,0,0,0.7);
     margin: 0.3rem 0 1.5rem; 
     flex-shrink: 0;
+    animation: fadeIn 0.3s ease-in-out; 
+ 
 }
 
 .ceritarakyat-container2 img {
@@ -1140,6 +1146,7 @@ span{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+     
 }
 
 .ceritarakyat-container2-content h2 {
@@ -1156,7 +1163,7 @@ span{
     font-size: 0.8rem;
     line-height: 1.2;
     margin: 0;
-    height: 8rem;
+    height: 8.5rem;
 }
 
 .ceritarakyat-container2-content a {
@@ -1660,6 +1667,137 @@ span{
     background-color: #f0f0f0;
 }
 
+/* Tablet */
+@media screen and (max-width: 1024px) {
+   html{
+    font-size: 90%;
+   }
+
+   .container-nav{
+        /* font-size: 80%; */
+        padding: 7.2px 1.5rem;
+   }
+   .container-nav-mix ul{
+        padding-left: 0;
+   }
+
+   #tentangkami{
+        min-height: auto;
+   }
+   
+   .topcerita-list{
+        flex-direction: column;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .topcerita-container{
+        width: 45%;
+        margin: 0 auto;
+    }
+    .topcerita-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .tk-img-cover-2 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .top-cerita-title a{
+        background-color: var(--third-color);
+        box-sizing: border-box;
+        /* padding: 1rem; */
+        color: var(--sixth-color);
+    }
+
+    .top-cerita-title h3{
+        margin-top: 0;
+    }
+
+    .top-cerita-title{
+        background-color: var(--third-color);
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .tk-sub-right-bot p{
+        font-size: 135%;
+    }
+
+    .tentangkami-image{
+        flex-wrap: wrap;
+    }
+
+    .footer-sub-center,
+    .footer-sub-buttom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-content{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+        /* flex-direction: column; */
+    }
+    .footer-sub-center h3::after,
+    .footer-sub-buttom h3::after{
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .f-message{
+        margin-top: 2rem;
+    }
+
+    #buttonUp{
+        bottom: 1rem;
+    }
+
+    .profile-container{
+        flex-direction: column;
+    }
+
+    .ceritarakyat-filter{
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 2rem;
+    }
+
+    #ceritarakyatContainer,
+    .slider-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .ceritarakyat-container2{
+        width: 40%;
+        margin: 1rem auto;
+    }
+
+    .slider-buttons{
+        display: none;
+    }
+    
+    .detailwrapper{
+        box-sizing: border-box;
+        padding: 5rem;
+    }
+
+}   
+
+/* Hp */
 @media screen and (max-width: 768px){
     html{
         font-size: 80%;
@@ -1751,6 +1889,11 @@ span{
        display: none;
     }
     
+    .topcerita-container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .beranda-container,
     .beranda-container-2,
     .beranda-social-media{
@@ -1808,14 +1951,22 @@ span{
         margin: 0;
     }
     
-    .beranda-searching .search-input,
-    .beranda-searching .search-button{
+    .beranda-searching .search-input{
         height: 2rem;
         margin: 0 ;
     }
+     .beranda-searching .search-button{
+        height: 4rem;
+        text-align: center;
+     }
 
+    .beranda-searching .search-button ion-icon{
+        /* box-sizing: border-box; */
+        /* padding-bottom: 2rem; */
+        font-size: 1.2rem;
+    }
     .beranda-searching .search-button{
-        padding: 1.5rem;
+        padding: 1.5rem
     }
     
     .beranda-social-media ul li a {
@@ -2042,7 +2193,7 @@ span{
     }
 
     .custom-select {
-        width: 10px;        
+        width: 85.5px;        
         position: relative;
         margin-bottom: 2rem;      
         user-select: none;      
@@ -2050,7 +2201,7 @@ span{
 
   
     .select-options {
-        width: 60%;                
+        width: 100%;       
     }
 
     .option-item {
@@ -2077,6 +2228,9 @@ span{
         color: var(--fifth-color);
     }
 
+    .ceritarakyat-container{
+        gap: 0.5rem;
+    }
 }
 
 

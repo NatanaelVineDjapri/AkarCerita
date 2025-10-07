@@ -13,9 +13,14 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 let curUsername = JSON.parse(localStorage.getItem("userln") || "null");
 const bookmarkBtn = document.getElementById('bookmarkBtn');
 var params = new URLSearchParams(window.location.search);
+const registerForm = document.getElementById('registerForm');
+const loginForm = document.getElementById('loginForm');
+const bookmarkList = document.getElementById('bookmarkList');
+const noBookmarks = document.getElementById('noBookmarks');
+const template = document.getElementById('bookmarkTemplate');
 
 if(page === 'detailcerita.html'){
-    var itemId = parseInt(params.get('id')); // ID cerita
+    var itemId = parseInt(params.get('id')); 
     var currentItem = ceritaRakyat.find(function(it) {
         return it.id === itemId;
     });
@@ -189,10 +194,6 @@ function removeBookmark(itemId) {
 }
 
 function showBookmarks() {
-    const bookmarkList = document.getElementById('bookmarkList');
-    const noBookmarks = document.getElementById('noBookmarks');
-    const template = document.getElementById('bookmarkTemplate');
-
     bookmarkList.innerHTML = '';
 
     if (!curUsername || !curUsername.bookmarks || curUsername.bookmarks.length === 0) {
@@ -206,7 +207,6 @@ function showBookmarks() {
         const clone = template.content.cloneNode(true);
 
         clone.querySelector('.bookmark-image').src = item.image || '';
-        clone.querySelector('.bookmark-image').alt = item.nama;
         clone.querySelector('.bookmark-title').innerText = item.nama;
         clone.querySelector('.bookmark-province').innerText = item.provinsi || '';
         clone.querySelector('.bookmark-actions a').href = `detailcerita.html?id=${item.id}`;
@@ -223,9 +223,6 @@ function showBookmarks() {
 if (page === 'akun.html') {
     showBookmarks();
 }
-
-const registerForm = document.getElementById('registerForm');
-const loginForm = document.getElementById('loginForm');
 
 if(registerForm){
     registerForm.addEventListener("submit", function(r){

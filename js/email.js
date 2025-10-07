@@ -1,5 +1,5 @@
 (function(){
-    emailjs.init("bszvSMDn2chzBykLn"); // ambil dari EmailJS dashboard
+    emailjs.init("bszvSMDn2chzBykLn"); 
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
@@ -12,3 +12,4 @@
         document.getElementById("status").innerText = "Gagal kirim " + JSON.stringify(err);
       });
   });
+

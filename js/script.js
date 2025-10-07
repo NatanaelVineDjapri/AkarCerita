@@ -5,10 +5,12 @@ var petaObj = document.getElementById("petaIndonesia");
 const container = document.querySelector(".topcerita-list");
 const registerBottom = document.getElementById("register")
 const query = document.getElementById("searchInput")
-
+let navbar = document.querySelector(".container-nav");
+let mobileMenu = document.querySelector(".container-nav-mix");
+var petaObj = document.getElementById("petaIndonesia");
+let lastScrollTop = 0;
 let currentIndex = 0;
 
-/* ---------------- SLIDESHOW ---------------- */
 function showSlide(index) {
   slides.forEach((slide, i) => {
     slide.style.display = "none";
@@ -28,7 +30,7 @@ function startSlideShow() {
       currentIndex = 0;
     }
     showSlide(currentIndex);
-  }, 1000000);
+  }, 10000);
 }
 
 function stopSlideShow() {
@@ -40,28 +42,6 @@ function clickRegister(){
     document.getElementById("signUp").click();
   }
 }
-nextBtn.addEventListener("click", function () {
-  currentIndex++;
-  if (currentIndex >= slides.length) {
-    currentIndex = 0;
-  }
-  showSlide(currentIndex);
-});
-
-prevBtn.addEventListener("click", function () {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = slides.length - 1;
-  }
-  showSlide(currentIndex);
-});
-
-showSlide(currentIndex);
-startSlideShow();
-
-let lastScrollTop = 0;
-let navbar = document.querySelector(".container-nav");
-let mobileMenu = document.querySelector(".container-nav-mix");
 
 window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -76,8 +56,43 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-/* ---------------- PETA INDONESIA ---------------- */
-var petaObj = document.getElementById("petaIndonesia");
+function renderTopCerita(containerSelector, data) {
+  const container = document.querySelector(containerSelector);
+  container.innerHTML = "";
+
+  data.forEach((cerita) => {
+    const div = document.createElement("div");
+    div.classList.add("topcerita-container");
+
+    div.innerHTML = `
+      <div class="tk-img-cover-2">
+        <img src="${cerita.img}" alt="${cerita.title}">
+      </div>
+      <div class="top-cerita-title">
+        <h3>${cerita.title}</h3>
+        <p>${cerita.desc}</p>
+        <a href="detailcerita.html?id=${cerita.id}" class="topcerita-link">Selengkapnya</a>
+
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+function doSearch() {
+    var querys = query.value.trim();
+    if(querys !== ""){
+        window.location.href = "ceritarakyat.html?search=" + encodeURIComponent(querys);
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: 'smooth' 
+    });
+}
 
 petaObj.addEventListener("load", function() {
     var svgDoc = petaObj.contentDocument;
@@ -122,58 +137,26 @@ petaObj.addEventListener("load", function() {
     }
 });
 
-function renderTopCerita(containerSelector, data) {
-  const container = document.querySelector(containerSelector);
-  container.innerHTML = "";
+nextBtn.addEventListener("click", function () {
+  currentIndex++;
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+});
 
-  data.forEach((cerita) => {
-    const div = document.createElement("div");
-    div.classList.add("topcerita-container");
-
-    div.innerHTML = `
-      <div class="tk-img-cover-2">
-        <img src="${cerita.img}" alt="${cerita.title}">
-      </div>
-      <div class="top-cerita-title">
-        <h3>${cerita.title}</h3>
-        <p>${cerita.desc}</p>
-        <a href="detailcerita.html?id=${cerita.id}" class="topcerita-link">Selengkapnya</a>
-
-      </div>
-    `;
-
-    container.appendChild(div);
-  });
-}
-
-renderTopCerita(".topcerita-list", topCerita);
-
-function doSearch() {
-    var querys = query.value.trim();
-    if(querys !== ""){
-        window.location.href = "ceritarakyat.html?search=" + encodeURIComponent(querys);
-    }
-}
-
-function scrollToTop() {
-    window.scrollTo({ 
-      top: 0, 
-      behavior: 'smooth' 
-    });
-}
+prevBtn.addEventListener("click", function () {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+});
 
 document.getElementById('searchBottom').addEventListener('click',function(){
   doSearch();
 })
 
-window.onscroll = function() {
-    const button = document.getElementById('buttonUp');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        button.style.display = 'flex';
-    } else{
-        button.style.display = 'none';
-    }
-};
 
 searchInput.addEventListener('focus', function() {
   stopSlideShow();
@@ -183,4 +166,10 @@ searchInput.addEventListener('focus', function() {
 searchInput.addEventListener('blur', function() {
   startSlideShow();
 });
+
+showSlide(currentIndex);
+startSlideShow();
+renderTopCerita(".topcerita-list", topCerita);
+
+
 

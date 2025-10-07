@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var template = document.getElementById("ceritaTemplate");
     var nextBtn = document.getElementById("nextBtn");
     var prevBtn = document.getElementById("prevBtn");
-    var themeFilter = document.getElementById("themeFilter");
     var currentList = []; 
 
     function renderCeritaList(list) {
@@ -83,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            currentList = initialList; // <-- set currentList sebelum render
+            currentList = initialList;
             renderCeritaList(initialList);
         }
     }
@@ -130,9 +129,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             display.textContent = selectedText;
             display.setAttribute('data-value', selectedValue);
-
             optionsContainer.style.display = 'none';
-
+            
             filterAndRender(selectedValue); 
         });
     });
@@ -144,6 +142,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     filterAndRender('');
-
 
 });
