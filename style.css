@@ -207,7 +207,6 @@ span{
     padding: 0.82rem 1rem;
     font-size: 16px;
     border-left: none;
-    /* border-radius: 0 25px 25px 0; */
     background-color: var(--fourth-color);
     color: white;
     cursor: pointer;
@@ -513,10 +512,6 @@ span{
     gap: 2rem;
     overflow-y: hidden;
     overflow-x: scroll;
-    /* scrollbar-width: none; */
-    /* -webkit-overflow-scrolling: touch; */
-    /* scroll-behavior: smooth; */
-    /* scroll-snap-type: x mandatory; */
 }
 
 .topcerita-list::-webkit-scrollbar {
@@ -1119,8 +1114,6 @@ span{
     justify-content: flex-start;
     margin: 0 auto;
     box-sizing: border-box;
-    /* padding: 1rem 2rem; */
-    -webkit-overflow-scrolling: touch; /
 }
 
 .ceritarakyat-container2 {
@@ -1535,7 +1528,6 @@ span{
     flex: 3;
     height: auto;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    /* border-radius: 0.5rem; */
     padding: 1.8rem 1.8rem 1.4rem;
     box-shadow: 0 0.7rem 1.9rem rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out 0.2s both;
@@ -1674,7 +1666,6 @@ span{
    }
 
    .container-nav{
-        /* font-size: 80%; */
         padding: 7.2px 1.5rem;
    }
    .container-nav-mix ul{
@@ -1695,6 +1686,7 @@ span{
         width: 45%;
         margin: 0 auto;
     }
+
     .topcerita-list{
         display: flex;
         flex-direction: row;
@@ -1709,7 +1701,6 @@ span{
     .top-cerita-title a{
         background-color: var(--third-color);
         box-sizing: border-box;
-        /* padding: 1rem; */
         color: var(--sixth-color);
     }
 
@@ -1747,9 +1738,8 @@ span{
         flex-direction: column !important;
         flex-wrap: wrap;
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-
-        /* flex-direction: column; */
     }
+
     .footer-sub-center h3::after,
     .footer-sub-buttom h3::after{
         bottom: -10%;
@@ -1797,7 +1787,7 @@ span{
 
 }   
 
-/* Hp */
+/* Handphone */
 @media screen and (max-width: 768px){
     html{
         font-size: 80%;
@@ -1961,8 +1951,6 @@ span{
      }
 
     .beranda-searching .search-button ion-icon{
-        /* box-sizing: border-box; */
-        /* padding-bottom: 2rem; */
         font-size: 1.2rem;
     }
     .beranda-searching .search-button{
